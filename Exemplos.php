@@ -41,7 +41,6 @@
     <hr>
 
     <h1>Constantes:</h1>
-
     <?php
         /*======Constantes======*/
         define('NOME', 'João');
@@ -77,7 +76,6 @@
     <hr>
 
     <h3>Array "Dicionário":</h3>
-
     <?php
         /*======Dicionário======*/
         $pessoa['nome'] = 'Kenji';
@@ -90,6 +88,15 @@
         echo '<br/> Cidade de pessoa: '.$pessoa['cidade'];
         echo '<br/> Essa pessoa existe? '.$pessoa['existe'];
         /*======Dicionário======*/
+    ?>
+    <hr>
+
+    <h3>Array Multidimencional</h3>
+    <?php
+        //=========Loop ARRAY MULTI Other==========
+        $arrMulti = ['Nome' => ['Guilherme', 'Joao'], 'Idade' => [35, 15]];
+
+        echo 'Meu nome é <strong>'.$arrMulti['Nome'][0].'</strong> e tenho <strong>'.$arrMulti['Idade'][0].'</strong> anos de idade.'
     ?>
     <hr>
 
@@ -175,6 +182,33 @@
         }
     ?>
     <hr>
+
+    <h3>Funções:</h3>
+    <?php
+        function mostrarDados($nome, $idade){
+            echo "Meu nome é $nome e eu tenho $idade anos.";
+        }
+
+        
+        function soma($n1 = 0, $n2 = 0){
+            return $n1 + $n2;
+        }
+
+        mostrarDados('Jefeson', 25);
+
+        echo '<br/>'.soma();
+        echo '<br/>'.soma(10, 15);
+
+    ?>
+    <hr>
+
+    <h3>Date:</h3>
+    <?php
+
+        date_default_timezone_set('America/Sao_Paulo');
+        $data = date('d/m/Y H:i:s', time()+(60 * 2) );
+        echo $data;
+    ?>
 
 </body>
 </html>
