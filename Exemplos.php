@@ -82,12 +82,13 @@
         $pessoa['idade'] = '15';
         $pessoa['cidade'] = 'Boston';
         $pessoa['existe'] = true;
+        /*======Dicionário======*/
 
         echo 'Nome da pessoa: '.$pessoa['nome'];
         echo '<br/> Idade da pessoa: '.$pessoa['idade'];
         echo '<br/> Cidade de pessoa: '.$pessoa['cidade'];
         echo '<br/> Essa pessoa existe? '.$pessoa['existe'];
-        /*======Dicionário======*/
+        
     ?>
     <hr>
 
@@ -101,8 +102,9 @@
     <hr>
 
     <h1>Condições:</h1>
+    <h3>if</h3>
     <?php
-        //=========Condições==========
+        //=========Condição if==========
         $var1 = 'A';
         $var2 = 'B';
         $var3 = 'C';
@@ -116,7 +118,24 @@
             <div style= "width: 100px; height: 100px; background: red;"></div>
     <?php
             }
-        //=========Condições==========
+        //=========Condição if==========
+    ?>
+    <hr>
+
+    <h3>Switch</h3>
+    <?php
+        //=========Switch==========
+        $testeSwitch = 'Jônatas';
+        switch($testeSwitch){
+            case 'Jônatas':
+                echo 'Jônatas é um nome bonito! Já leu ele ao contrário?';
+                break;
+
+            case 'João':
+                echo 'Esse nome é bem... Comum.';
+                break;
+        }
+        //=========Switch==========
     ?>
     <hr>
 
@@ -183,16 +202,19 @@
     ?>
     <hr>
 
-    <h3>Funções:</h3>
+    <h1>Funções:</h1>
     <?php
+        //=========Função 1==========
         function mostrarDados($nome, $idade){
             echo "Meu nome é $nome e eu tenho $idade anos.";
         }
+        //=========Função 1==========
 
-        
+        //=========Função 2==========
         function soma($n1 = 0, $n2 = 0){
             return $n1 + $n2;
         }
+        //=========Função 2==========
 
         mostrarDados('Jefeson', 25);
 
@@ -204,11 +226,29 @@
 
     <h3>Date:</h3>
     <?php
-
+        //=========Timezone e Formato==========
         date_default_timezone_set('America/Sao_Paulo');
         $data = date('d/m/Y H:i:s', time()+(60 * 2) );
         echo $data;
+        //=====================================
     ?>
+    <hr>
+
+    <h3>String:</h3>
+    <?php
+        //=========Funções básicas de String==========
+        $listaEscrita = 'A1 A2 A3 A4 A5 A6';
+
+        //=========Separa String e mostra Array==========
+        $ListaArray = explode(' ', $listaEscrita);
+        print_r($ListaArray);
+
+        //=========Junta um Array formando String==========
+        $ListaArray = implode(' ', $ListaArray);
+        echo '<br/>'.$ListaArray;
+    ?>
+
+
 
 </body>
 </html>
