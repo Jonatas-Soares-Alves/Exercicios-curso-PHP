@@ -247,8 +247,31 @@
         $ListaArray = implode(' ', $ListaArray);
         echo '<br/>'.$ListaArray;
     ?>
+    <hr>
 
+    <h3>Array</h3>
+    <?php
+        //=========Função que une Arrays==========
+        $array1 = ['Chave1'=>'Valor1', 'Chave2'=>'Valor2'];
+        $array2 = ['Chave3'=>'Valor3', 'Chave4'=>'Valor4'];
+        $resultado = array_merge($array1, $array2);
+        print_r($resultado);
+        echo '<br/>';
 
+        //=========Função que retorna o valor de chaves iguais==========
+        $interArray1 = ['Chave1'=>'Valor1', 'Chave2'=>'Valor2'];
+        $interArray2 = ['Chave1'=>'Valor1', 'Chave4'=>'Valor4'];
+        print_r(array_intersect_key($interArray1, $interArray2));
+        echo '<br/>';
+
+        //=========Função que aplica uma função a todos os valores de uma Array==========
+        $mapArray = ['<p>Paragrafo</p>', 'Texto', '<h6>Titulo</h6>'];
+        echo '<br/>=====================Array não mapeado======================<br/>';
+        print_r($mapArray);
+        echo '<br/>=======================Array mapeado========================<br/>';
+        print_r(array_map('strip_tags', $mapArray));
+    ?>
+    <hr>
 
 </body>
 </html>
