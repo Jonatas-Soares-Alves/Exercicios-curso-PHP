@@ -10,30 +10,55 @@
     <?php
         include('Exemplos.class.php');
 
-        $objeto = new Exemplo();
+        //=============USE===============
+        use \Testes\Pai;
+        use \Testes\PreSet as Pre;
 
-        //$objeto->varPriv = 'Var Privado';
+        //===========Variável e constante==============
+        $objeto = new \Testes\Exemplo();
+
+        //$objeto->varPriv = 'Var Privado'; <--------- Fatal Error Line (Private Method)
         $objeto->varPublic = 'Var Publico';
 
-        //echo $objeto->varPriv;
         echo $objeto->varPublic .'<hr/>';
+        echo $objeto::ValorConstante;
+        //===========Variável e constante==============
 
-        $pessoa1 = new Pessoa();
-        $pessoa2 = new Pessoa();
+        $pessoa1 = new \Testes\Pessoa();
+        $pessoa2 = new \Testes\Pessoa();
 
+        //=====Set e print do objeto 1=====
         $pessoa1->SetNome('Ana');
         $pessoa1->SetIdade(27);
         $pessoa1->SetAltura(1.65);
+
         $pessoa1->MostrarTudo();
 
+        //=====Mudança e print do objeto 1=====
         $pessoa1->Envelhecer(3);
         $pessoa1->Crescer(0.10);
+
         $pessoa1->MostrarTudo();
 
+        //=====Set e print do OBJETO 2=====
         $pessoa2->SetNome('João');
         $pessoa2->SetIdade(56);
         $pessoa2->SetAltura('1.78');
-        $pessoa1->MostrarTudo();
+
+        $pessoa2->MostrarTudo();
+
+        //=====Set e print do objeto PAI=====
+        $pai = new Pai();
+
+        $pai->Falar();
+        $pai->MostrarFalarBaixo();
+        //$pai->Cochichar(); <--------- Fatal Error Line (Private Method)
+
+        //=====Objeto com método Construct=====
+        $constr = new Pre('Info-1','Info-2');
+
+        echo '<br/><hr>'. $constr->getSet1();
+        echo '<br/>'.     $constr->getSet2(). '<hr>';
     ?>
     
 </body>
