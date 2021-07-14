@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<registros>
+    <personagem1>
+        <pessoalInf1>
+            <nome1>Gabriel</nome1>
+            <idade1>24</idade1>
+        </pessoalInf1>
+
+        <itens1>
+            <mochila1>
+                <comida1>Maçã</comida1>
+                <equipamento1>Martelo</equipamento1>
+            </mochila1>
+        </itens1>
+    </personagem1>
+
+    <personagem2>
+        <pessoalInf2>
+            <nome2>José</nome2>
+            <idade2>32</idade2>
+        </pessoalInf2>
+
+        <itens2>
+            <mochila2>
+                <comida2>Hamburguer</comida2>
+                <equipamento2>Machado</equipamento2>
+            </mochila2>
+        </itens2>
+    </personagem2>
+</registros>
