@@ -4,7 +4,9 @@
 ---
 ## Error!
 **File:** [Exercicios-curso-PHP\XML-JSON\JSON\ReadingJ.php](https://github.com/Jonatas-Soares-Alves/Exercicios-curso-PHP/blob/main/XML-JSON/JSON/ReadingJ.php)
+
 **Lines:** 38 - 48;
+
 **Problem:** Doesn't read the JSON in ['jsonRegistrado.php'](https://github.com/Jonatas-Soares-Alves/Exercicios-curso-PHP/blob/main/XML-JSON/JSON/jsonRegistrado.php)
 
 ### ReadingJ.php:
