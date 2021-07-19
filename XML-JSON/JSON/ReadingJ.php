@@ -34,14 +34,20 @@
 <body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
+    {
+        //VVVVVVVVVVVVVV Problem: Isn't reading the JSON file. VVVVVVVVVVVVVV
         $(function(){
             $.ajax({
                 url:'jsonRegistrado.php',
                 dataType:'json'
             }).done(function(data){
                 console.log(data.nome);
+                alert(data.nome);
             })
         })
+        //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    }
     </script>
+
 </body>
 </html>
